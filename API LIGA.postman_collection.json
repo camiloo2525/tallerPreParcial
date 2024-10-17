@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "8910a84b-4bd5-4ab9-b677-e2f12afcde5d",
+		"name": "API LIGA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34965658"
+	},
+	"item": [
+		{
+			"name": "store",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n  \"email\": \"milo73810@gmail.com\",\r\n  \"password\": \"camilo2525\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"juan camilo\",\r\n  \"email\": \"milo73810@gmail.com\",\r\n  \"password\": \"camilo2525\",\r\n  \"password_confirmation\": \"camilo2525\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "milo73810@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombreEstadio\": \"old traford\",\r\n  \"capacidadEstadio\": 74000,\r\n  \"entrenador\": \"erik ten hag\",\r\n  \"patrocinador\": \"snapdragon\",\r\n  \"equipoRival\": \"liverpool\",\r\n  \"añoFundacion\": 1878,\r\n  \"titulos\": 20,\r\n  \"historia\": \"manchester unites equipo de manchester\",\r\n  \"proximoPartido\": \"19-10-2024\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/football-teams\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"football-teams\n"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
